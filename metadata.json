@@ -1,0 +1,6 @@
+{
+  "name": "MERAI SIEME — Engineered to Inspire",
+  "description": "Official flagship e-commerce platform for MERAI SIEME automotive technology, featuring Driver.MERAI Daiichi Edition car displays, audio, wearables, and robotic companion electronics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

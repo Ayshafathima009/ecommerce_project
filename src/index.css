@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Luxury Theme Tokens */
+    --pearl-bg: #FAF9F6;
+    --pearl-silver: #E8E6E1;
+    --metallic-silver: #D4D4D4;
+    --charcoal-dark: #1C1917;
+    --charcoal-body: #292524;
+    --charcoal-muted: #57534E;
+    
+    --gold-primary: #D4AF37;
+    --gold-light: #F5D76E;
+    --gold-dark: #B8860B;
+    --gold-deep: #996515;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--pearl-bg);
+    color: var(--charcoal-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    color: var(--charcoal-dark);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Luxury Metallic Gold Header & Shimmer */
+.metallic-gold-header {
+  background: linear-gradient(135deg, #996515 0%, #B8860B 18%, #D4AF37 35%, #F5D76E 50%, #D4AF37 68%, #B8860B 82%, #805500 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-gold-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: shineSweep 7s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes shineSweep {
+  0% {
+    left: -100%;
+  }
+  30% {
+    left: 200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Pearl Silver Surface and Cards */
+.pearl-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF9F6 100%);
+  border: 1px solid #E5E2DC;
+  box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.04), 0 1px 3px 0 rgba(28, 25, 23, 0.02);
+}
+
+.pearl-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pearl-card-hover:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 10px 25px -4px rgba(212, 175, 55, 0.12), 0 4px 6px -2px rgba(28, 25, 23, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Gold Action Buttons */
+.btn-gold-primary {
+  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 40%, #F5D76E 60%, #D4AF37 100%);
+  color: #1C1917;
+  font-weight: 700;
+  border: 1px solid #B8860B;
+  box-shadow: 0 4px 14px -1px rgba(212, 175, 55, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5D76E 40%, #FFF2B2 60%, #D4AF37 100%);
+  box-shadow: 0 6px 20px -1px rgba(212, 175, 55, 0.5);
+  transform: translateY(-1px);
+}
+.btn-gold-primary:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.btn-pearl-secondary {
+  background: #FFFFFF;
+  color: #292524;
+  border: 1px solid #D6D3CD;
+  transition: all 0.2s ease;
+}
+.btn-pearl-secondary:hover {
+  background: #F5F4F0;
+  border-color: #B8860B;
+  color: #1C1917;
+}
+
+/* Subtle Gold Glow */
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+/* Custom polished scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #E8E6E1;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4C0B6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* RTL layout helpers for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}

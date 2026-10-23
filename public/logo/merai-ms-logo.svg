@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" fill="none">
+  <defs>
+    <!-- Metallic Gold Gradients -->
+    <linearGradient id="goldSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#996515" />
+      <stop offset="25%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#FFF2B2" />
+      <stop offset="75%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#805500" />
+    </linearGradient>
+
+    <linearGradient id="goldBevel" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#734D00" />
+      <stop offset="40%" stop-color="#B8860B" />
+      <stop offset="60%" stop-color="#F5D76E" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+
+    <!-- Polished Silver Highlights -->
+    <linearGradient id="silverSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#E2E8F0" />
+      <stop offset="70%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <!-- Pearl Surface Background Filter -->
+    <radialGradient id="pearlBadgeBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#FAF9F6" />
+      <stop offset="100%" stop-color="#E8E6E1" />
+    </radialGradient>
+
+    <!-- Drop Shadows for 3D metallic depth -->
+    <filter id="msGoldShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1C1917" flood-opacity="0.3" />
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#D4AF37" flood-opacity="0.25" />
+    </filter>
+
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#1C1917" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- 3D Monogram Shield / Medallion -->
+  <g transform="translate(10, 10)" filter="url(#badgeShadow)">
+    <!-- Outer Pearl-Silver Hexagonal Shield -->
+    <polygon points="40,4 72,20 72,60 40,76 8,60 8,20" fill="url(#pearlBadgeBg)" stroke="url(#goldSheen)" stroke-width="2.5" />
+    <!-- Inner Polished Silver Rim -->
+    <polygon points="40,8 68,22 68,58 40,72 12,58 12,22" fill="none" stroke="url(#silverSheen)" stroke-width="1.2" opacity="0.8" />
+    
+    <!-- Monogram Letters M and S intertwined in 3D Metallic Gold -->
+    <g filter="url(#msGoldShadow)">
+      <!-- Letter M (Left Anchor) -->
+      <path d="M20,54 L20,26 L27,26 L34,42 L41,26 L48,26 L48,54 L42,54 L42,35 L36,49 L32,49 L26,35 L26,54 Z" fill="url(#goldSheen)" stroke="url(#goldBevel)" stroke-width="0.8" />
+      
+      <!-- Letter S (Right Anchor with overlapping curve) -->
+      <path d="M60,33 C58,28 53,26 47,26 C41,26 37,29 37,33 C37,37 40,39 46,41 L49,42 C54,43 59,46 59,51 C59,57 53,60 46,60 C39,60 34,56 32,50 L38,48 C39,52 42,55 46,55 C50,55 53,53 53,50 C53,46 50,44 44,42 L41,41 C36,39 31,37 31,32 C31,26 37,22 46,22 C53,22 58,26 60,31 Z" fill="url(#silverSheen)" stroke="url(#goldSheen)" stroke-width="0.8" opacity="0.9" />
+
+      <!-- High-polish Central Star/Sparkle -->
+      <polygon points="40,36 42,40 46,40 43,43 44,47 40,44 36,47 37,43 34,40 38,40" fill="#FFFBEB" />
+    </g>
+  </g>
+
+  <!-- Typography Zone: MERAI SIEME -->
+  <g transform="translate(100, 22)">
+    <!-- Brand Name: MERAI -->
+    <text x="0" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="34" letter-spacing="4.5" fill="url(#goldBevel)" filter="url(#msGoldShadow)">
+      MERAI
+    </text>
+
+    <!-- Sub-Wordmark: SIEME -->
+    <text x="145" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="28" letter-spacing="3" fill="#1C1917">
+      SIEME
+    </text>
+
+    <!-- Sub-Banner: SIEME DRIVE -->
+    <rect x="0" y="42" width="95" height="15" rx="3" fill="url(#goldSheen)" />
+    <text x="6" y="53" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="9" letter-spacing="1.8" fill="#1C1917">
+      SIEME DRIVE
+    </text>
+
+    <!-- Vertical Accent Divider -->
+    <line x1="105" y1="42" x2="105" y2="57" stroke="#D4D4D4" stroke-width="1.5" />
+
+    <!-- Tagline: Engineered to Inspire -->
+    <text x="115" y="53" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10.5" letter-spacing="1.8" fill="#44403C">
+      ENGINEERED TO INSPIRE
+    </text>
+  </g>
+</svg>
